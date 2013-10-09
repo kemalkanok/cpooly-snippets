@@ -1,0 +1,66 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * @author ${2:[author]} ${3:[email]}
+ * @description ${1:classname} api controller page
+ */
+class ${1:classname}
+{
+	//api controller construcotr
+	function __construct()
+	{
+		load::library("database",\$this);
+	} 
+	/**
+ 	 * class constructor
+ 	 * @return void
+	 */
+	function get(\$id = null)
+	{
+		if(\$id == null)
+		{
+			return \$this -> database -> get("${1:classname}");
+		}
+		else
+		{
+			return \$this -> database -> where("id=",\$id) get("${1:classname}");
+		}
+	}
+	/**
+ 	 * insert method of api
+ 	 * @param $data [array] 
+ 	 * @return void
+ 	 */
+	function post(array \$data)
+	{
+		\$this -> database -> insert(\$data, "${1:classname}");
+	}
+		/**
+ 	 * update method of api
+ 	 * @param $data [array] 
+ 	 * @param $id [int] 
+ 	 * @return void
+ 	 */
+	function update(array \$data , \$id)
+	{
+		\$this -> database -> where("id=",\$id) -> update(\$data,"${1:classname}");
+	}
+	/**
+ 	 * delete method of api
+ 	 * @param $id [int] 
+ 	 * @return void
+ 	 */
+	function delete(\$id)
+	{
+		\$this -> database -> where("id=",\$id) -> delete("${1:classname}");
+	}
+
+
+}
+//end of ${1:classname} api controller
+//coded by ${2:[author]}
+]]></content>
+	<tabTrigger>api</tabTrigger>
+	<scope>source.php</scope>
+	<description>create new api controller</description>
+</snippet>

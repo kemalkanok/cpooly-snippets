@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[load::library("database",\$this);]]></content>
+
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<description>load::library("database",$this);</description>
+	<tabTrigger>ldb</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

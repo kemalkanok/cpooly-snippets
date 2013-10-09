@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[/**
+ * @author ${2:developer} ${3:email}
+ * @description ${1:classname} library page
+ */
+class ${1:classname}
+{
+	function __construct(${4})
+	{
+		${5:#code...}
+	}
+	function index(${6})
+	{
+		${7:#code...}
+	}
+}
+//end of ${1:classname} library
+//coded by ${2:developer}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>clb</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
