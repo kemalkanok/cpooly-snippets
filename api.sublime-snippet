@@ -23,7 +23,7 @@ class ${1:classname}
 		}
 		else
 		{
-			return \$this -> database -> where("id=",\$id) get("${1:classname}");
+			return \$this -> database -> where("id=",\$id) -> get("${1:classname}");
 		}
 	}
 	/**
@@ -41,7 +41,7 @@ class ${1:classname}
  	 * @param $id [int] 
  	 * @return void
  	 */
-	function update(array \$data , \$id)
+	function put(array \$data , \$id)
 	{
 		\$this -> database -> where("id=",\$id) -> update(\$data,"${1:classname}");
 	}
